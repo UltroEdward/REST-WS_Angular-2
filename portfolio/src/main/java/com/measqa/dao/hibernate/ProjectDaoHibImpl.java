@@ -1,4 +1,4 @@
-package com.measqa.dao;
+package com.measqa.dao.hibernate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,11 @@ import java.util.List;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
+import com.measqa.dao.interfaces.ProjectDao;
 import com.measqa.entity.portfolio.Project;
 import com.measqa.utils.HibernateUtil;
 
-public class ProjectDao {
+public class ProjectDaoHibImpl implements ProjectDao {
 
 	public List<Project> getAllProjects() {
 		List<Project> projects = new ArrayList<Project>();

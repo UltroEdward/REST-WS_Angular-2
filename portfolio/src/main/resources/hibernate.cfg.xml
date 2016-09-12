@@ -14,5 +14,6 @@
 		
 
 		<mapping class="com.measqa.entity.portfolio.Project" />
+		<mapping class="com.measqa.entity.Article" />
 	</session-factory>
 </hibernate-configuration>

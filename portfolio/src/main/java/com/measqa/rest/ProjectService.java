@@ -8,27 +8,23 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.measqa.dao.ProjectDao;
 import com.measqa.entity.portfolio.Project;
 
 @Path("/projects")
-public class ProjectService {
+public class ProjectService extends BaseService {
 
-	ProjectDao projectDao = new ProjectDao();
-	
 	@GET
 	@Path("")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Project> getAllProjects() {
-		return projectDao.getAllProjects();
+		return factory.getProjectDao().getAllProjects();
 	}
-	
-	
+
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Project getProject(@PathParam("id") int id) {
-		return projectDao.getProject(id);
+		return factory.getProjectDao().getProject(id);
 
 	}
 }

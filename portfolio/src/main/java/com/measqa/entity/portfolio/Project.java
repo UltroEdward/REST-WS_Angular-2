@@ -16,17 +16,17 @@ public class Project {
 
 	private int id;
 	private String name;
+	private String role;
 	private String webSite;
 	private String startDate;
 	private String endDate;
-	private String role;
-
+	
 	private String descriptionShort;
 	private String descriptionFull;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "PROJECTS_ID", unique = true, nullable = false)
+	@Column(name = "PROJECT_ID", unique = true, nullable = false)
 	public int getId() {
 		return id;
 	}
@@ -71,7 +71,7 @@ public class Project {
 		this.endDate = endDate;
 	}
 
-	@Column(name = "DESCRIPTION_BRIEF", unique = true, nullable = false, length = 10)
+	@Column(name = "DESCRIPTION_SHORT", unique = true, nullable = false, length = 10)
 	public String getDescriptionShort() {
 		return descriptionShort;
 	}
