@@ -4,16 +4,32 @@
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
+	
+
+    	
+      
 		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.password">root</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/portfolio?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/portfolio?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
 		
-
-		<mapping class="com.measqa.entity.portfolio.Project" />
+		<property name="hibernate.c3p0.min_size">10</property>
+  		<property name="hibernate.c3p0.max_size">200</property>
+  		<property name="hibernate.c3p0.timeout">1800</property>
+ 		<property name="hibernate.c3p0.max_statements">100</property>
+ 		<property name="hibernate.c3p0.idle_test_period">3000</property>
+  
+	    <mapping class="com.measqa.entity.portfolio.Project" />
 		<mapping class="com.measqa.entity.Article" />
+        
+
+	
 	</session-factory>
 </hibernate-configuration>
+
+
+
+ 
