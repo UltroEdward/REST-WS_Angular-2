@@ -11,8 +11,6 @@ import com.measqa.entity.Article;
 @Path("/articles")
 public class ArticleService extends BaseService {
 
-	
-
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)

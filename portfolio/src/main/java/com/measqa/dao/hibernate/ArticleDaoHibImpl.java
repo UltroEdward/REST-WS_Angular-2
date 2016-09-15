@@ -10,13 +10,12 @@ import com.measqa.utils.HibernateUtil;
 public class ArticleDaoHibImpl implements ArticleDao {
 
 	public Article getArticle(int id) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
+	    Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
 		Article article = new Article();
 		article = (Article) session.load(Article.class, id);
 		Hibernate.initialize(article);
 		session.getTransaction().commit();
-		session.close();
 		return article;
 	}
 

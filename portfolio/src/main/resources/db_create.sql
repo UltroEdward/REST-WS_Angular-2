@@ -28,7 +28,7 @@ CREATE TABLE `ARTICLES` (
 
 -- ******************** Create tables ******************** 
 INSERT INTO `PROJECTS` VALUES (1, 'FICO', 'qa', 'www.fico.com', 'start', 'end', 'testing', 'tons of testing');
-INSERT INTO `ARTICLES` VALUES (1, 'Programming', 'pics/cat.jpg', 'Programming is awesome', 'Programming is awesome - i know what i am speaking about!');
+INSERT INTO `ARTICLES` VALUES (1, 'Programming', 'img/cat.jpg', 'Programming is awesome', 'Programming is awesome - i know what i am speaking about!');
 
 
 
