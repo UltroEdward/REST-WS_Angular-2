@@ -4,6 +4,7 @@
 }
 
 body {
+	background-image: none;
 	background-color: #d3d8de;
 }
 
@@ -23,4 +24,19 @@ body {
 
 .navbar {
 	background-color: #ffec80;
+}
+
+.social a {
+	text-align: center;
+	font-size: 45px;
+	text-align: center;
+	text-decoration: none;
+	
+	margin: 10px;
+	width: 62px;
+    height: 62px;
+}
+
+.social a:hover {
+color:#ffec80
 }
