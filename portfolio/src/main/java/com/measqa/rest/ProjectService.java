@@ -8,6 +8,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.measqa.entity.portfolio.Company;
 import com.measqa.entity.portfolio.Project;
 
 @Path("/projects")
@@ -25,6 +26,15 @@ public class ProjectService extends BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Project getProject(@PathParam("id") int id) {
 		return factory.getProjectDao().getProject(id);
+
+	}
+	
+
+	@GET
+	@Path("/2/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Company getCompany(@PathParam("id") int id) {
+		return factory.getCompanyDao().getCompany(id);
 
 	}
 }

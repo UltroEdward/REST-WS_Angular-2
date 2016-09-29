@@ -24,8 +24,8 @@
  		<property name="hibernate.c3p0.idle_test_period">3000</property>
   
 	    <mapping class="com.measqa.entity.portfolio.Project" />
-		<mapping class="com.measqa.entity.Article" />
-        
+		 <mapping class="com.measqa.entity.portfolio.Company" />
+        <mapping class="com.measqa.entity.Article" />
 
 	
 	</session-factory>

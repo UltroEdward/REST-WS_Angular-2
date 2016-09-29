@@ -1,6 +1,7 @@
 package com.measqa.dao;
 
 import com.measqa.dao.interfaces.ArticleDao;
+import com.measqa.dao.interfaces.CompanyDao;
 import com.measqa.dao.interfaces.ProjectDao;
 
 public abstract class DaoFactory {
@@ -12,5 +13,7 @@ public abstract class DaoFactory {
 	public abstract ArticleDao getArticleDao();
 
 	public abstract ProjectDao getProjectDao();
+	
+	public abstract CompanyDao getCompanyDao();
 
 }

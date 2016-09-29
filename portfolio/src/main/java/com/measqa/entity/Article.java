@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "articles")
+@Table(name = "ARTICLES")
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Article {
 
