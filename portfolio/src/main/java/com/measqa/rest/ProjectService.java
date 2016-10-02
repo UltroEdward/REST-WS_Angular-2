@@ -29,12 +29,4 @@ public class ProjectService extends BaseService {
 
 	}
 	
-
-	@GET
-	@Path("/2/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Company getCompany(@PathParam("id") int id) {
-		return factory.getCompanyDao().getCompany(id);
-
-	}
 }
