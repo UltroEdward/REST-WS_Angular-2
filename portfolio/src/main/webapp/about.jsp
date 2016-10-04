@@ -15,6 +15,7 @@
 <!-- Custom Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 
 <body>
@@ -59,11 +60,8 @@
 										</div>
 									</div>
 									<!-- Controls -->
-									<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span
-										class="icon-prev"></span>
-									</a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span
-										class="icon-next"></span>
-									</a>
+									<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span> </a> 
+									<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span> </a>
 								</div>
 							</div>
 						</div>
@@ -98,7 +96,7 @@
 					</h2>
 					<hr>
 				</div>
-				
+
 				<div class="col-lg-12 text-center">
 					<ul style="text-align: left">
 						<li>Experienced Senior Software Test Automation Engineer with technical background and hands-on experience in
@@ -143,12 +141,8 @@
 				<div class="col-lg-12">
 					<hr>
 					<h2 class="intro-text text-center social">
-						<a href="https://github.com/UltroEdward " target="_blank">
-							<i class="fa fa-github" aria-hidden="true"></i>
-						 </a>
-						<a href="https://www.linkedin.com/in/eduard-loktev-ab572280" target="_blank">
-							<i class="fa fa-linkedin" aria-hidden="true"></i>
-						</a>
+						<a href="https://github.com/UltroEdward " target="_blank"> <i class="fa fa-github" aria-hidden="true"> <!--  Some content --></i> </a>
+						 <a href="https://www.linkedin.com/in/eduard-loktev-ab572280" target="_blank"> <i class="fa fa-linkedin" aria-hidden="true"> <!--  Some content --></i> </a>
 					</h2>
 					<hr>
 				</div>
@@ -156,7 +150,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Experience block -->
 	<div class="container">
@@ -175,7 +168,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
