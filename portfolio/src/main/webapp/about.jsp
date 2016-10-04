@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 
 <head>
-
-<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,55 +13,17 @@
 <link href="css/css.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-	rel="stylesheet" type="text/css">
-<link
-	href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
-	rel="stylesheet" type="text/css">
-
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
+	<!--Here will be inserted header with nav bar  -->
+	<%@ include file="template/header.html"%>
 
-	<div id="header-top">
-		<a href="index.html" class="brand">Me as QA</a>
-		<div class="address-bar">Just few words about QA</div>
-	</div>
-
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-				<a class="navbar-brand" href="index.html">Business Casual</a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a>
-					<li><a href="about.html">About me</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container -->
-	</nav>
-
-
-
-
+	<!-- About me, main apart -->
 	<div class="container">
-
 		<div class="row">
 			<div class="box" style="background: #fff; padding: 10px">
 				<div class="col-lg-12">
@@ -72,6 +33,7 @@
 					</h2>
 					<hr>
 				</div>
+
 				<div class="col-md-4">
 					<!-- img class="img-responsive img-border-left" src="img/slide-2.jpg" alt="">-->
 					<div class="row">
@@ -84,7 +46,6 @@
 										<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 										<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 									</ol>
-
 									<!-- Wrapper for slides -->
 									<div class="carousel-inner">
 										<div class="item active">
@@ -97,7 +58,6 @@
 											<img class="img-responsive img-full" src="img/avatar2.jpg" alt="">
 										</div>
 									</div>
-
 									<!-- Controls -->
 									<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span
 										class="icon-prev"></span>
@@ -108,9 +68,8 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
+
 				<div class="col-md-8">
 					<h1>Senior QA Automation</h1>
 					<h2>Expert: Java, UI/API automation, testing</h2>
@@ -118,26 +77,17 @@
 					<h3>Location: Belarus, Minsk</h3>
 					<hr>
 					<div class="contacts" style="margin-top: 10px;">
-
 						<h3>Contacts:</h3>
 						<h4>Email: edvardloktev@gmail.com</h4>
 					</div>
-
 				</div>
-
 
 				<div class="clearfix"></div>
 			</div>
 		</div>
-
 	</div>
 
-
-
-
-
-
-
+	<!-- About me, professional summary-->
 	<div class="container">
 		<div class="row">
 			<div class="box">
@@ -148,6 +98,7 @@
 					</h2>
 					<hr>
 				</div>
+				
 				<div class="col-lg-12 text-center">
 					<ul style="text-align: left">
 						<li>Experienced Senior Software Test Automation Engineer with technical background and hands-on experience in
@@ -172,6 +123,7 @@
 							Documentation (English) Some</li>
 					</ul>
 				</div>
+
 				<div class="col-lg-12">
 					<hr>
 					<h2 class="intro-text text-center">
@@ -179,38 +131,34 @@
 					</h2>
 					<hr>
 					<ul style="text-align: left">
-						<li>Economics, Banking 2007-2012 in <a href="http://www.bseu.by/english" target="_blank">Belarus State
-								Economic University</a></li>
+						<li>Economics, Banking 2007-2012 in <a href="http://www.bseu.by/english" target="_blank">Belarus State Economic University</a></li>
 						<li>SQL 2012 in <a href="http://www.st.by/en/" target="_blank">System Technologies</a></li>
-						<li>Information Technology 2013-2015 in <a href="http://en.bntu.by" target="_blank">Belarusian National
-								Technical University</a></li>
+						<li>Information Technology 2013-2015 in <a href="http://en.bntu.by" target="_blank">Belarusian National Technical University</a></li>
 						<li>JAVA EE 2015 in <a href="http://www.belhard.com/en" target="_blank">BelHard</a></li>
 						<li>Certificate Oracle Java SE 7 Programmer I 2016 in <a href="www.oracle.com" target="_blank">Oracle</a></li>
 						<li>Python 2016 in <a href="http://www.belhard.com/en" target="_blank">BelHard</a></li>
-
 					</ul>
 				</div>
+
 				<div class="col-lg-12">
 					<hr>
 					<h2 class="intro-text text-center social">
-						<a href="https://github.com/UltroEdward " target="_blank"><i class="fa fa-github" aria-hidden="true"></i> </a> <a
-							href="https://www.linkedin.com/in/eduard-loktev-ab572280" target="_blank"><i class="fa fa-linkedin"
-							aria-hidden="true"></i> </a>
+						<a href="https://github.com/UltroEdward " target="_blank">
+							<i class="fa fa-github" aria-hidden="true"></i>
+						 </a>
+						<a href="https://www.linkedin.com/in/eduard-loktev-ab572280" target="_blank">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
 					</h2>
 					<hr>
 				</div>
-
-
 
 			</div>
 		</div>
 	</div>
 
 
-
-
-
-
+	<!-- Experience block -->
 	<div class="container">
 		<div class="row">
 			<div class="box">
@@ -222,17 +170,11 @@
 					<hr>
 				</div>
 
+				<!-- Experience items will be added here -->
 				<div class="job-container"></div>
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
