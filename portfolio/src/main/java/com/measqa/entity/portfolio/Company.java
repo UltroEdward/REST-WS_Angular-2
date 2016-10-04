@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
@@ -28,6 +29,7 @@ public class Company {
 	private Set <Project> projects;
 
 	@OneToMany
+	@OrderBy("PROJECT_ID ASC")
 	@JoinColumn(name = "COMPANY_ID")
 	public Set<Project> getProjects() {
 		return projects;

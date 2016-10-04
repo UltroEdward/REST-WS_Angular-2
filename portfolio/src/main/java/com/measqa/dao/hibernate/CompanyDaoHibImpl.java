@@ -1,5 +1,8 @@
 package com.measqa.dao.hibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
@@ -18,5 +21,21 @@ public class CompanyDaoHibImpl implements CompanyDao {
 		Hibernate.initialize(comp.getProjects());
 		session.getTransaction().commit();
 		return comp;
+	}
+
+	@SuppressWarnings("deprecation")
+	@Override
+	public List<Company> getAllCompamies() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		List<Company> companyies = new ArrayList<Company>();
+
+		companyies = session.createCriteria(Company.class).list();
+		Hibernate.initialize(companyies);
+		for(Company company: companyies){
+			Hibernate.initialize(company.getProjects());
+		}	
+		session.getTransaction().commit();
+		return companyies;
 	}
 }
