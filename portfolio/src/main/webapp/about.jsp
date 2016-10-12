@@ -117,8 +117,7 @@
 						<li>Software Construction: Bash, Regular Expressions, SQL, XPath/CSSPath, JsonPath</li>
 						<li>CI/Build tools/Version Control Systems: Jenkins, Maven/Gradle, Git/Subversion</li>
 						<li>Other Tools and Methods: MS Office, Oracle VirtualBox, PuTTY, Toad, Fiddler
-						<li>Software Engineering Management: JetBrains YouTrack, Rally, Jira • Technical Writing: Writing Technical
-							Documentation (English) Some</li>
+						<li>Software Engineering Management: JetBrains YouTrack, Rally, Jira</li>
 					</ul>
 				</div>
 

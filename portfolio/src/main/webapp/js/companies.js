@@ -3,14 +3,15 @@ $(function() {
 	$.get('template/company.html', function(compTempl) {
 		$.getJSON('rest/companies', function(companiesJson) {
 			$.get('template/project.html',function(prTempl) {
-						console.log(companiesJson)
 						for ( var comp in companiesJson) {
-							var html = Mustache.to_html(compTempl,companiesJson[comp]);
-							$("div.job-container").append(html);
+							var companyHtml = Mustache.to_html(compTempl,companiesJson[comp]);
+							console.log("id is: "+ comp)
+							$("div.job-container").append("<div id="+comp+"> </div>");
+							$("div.job-container div#"+comp).append(companyHtml);
 							for (var i in companiesJson[comp].projects) {
 								console.log(companiesJson[comp].projects);
-								html = Mustache.to_html(prTempl,companiesJson[comp].projects[i])
-								$("div.project-container").append(html);
+								projectHtml = Mustache.to_html(prTempl,companiesJson[comp].projects[i])
+								$("div#"+comp+" div.project-container").append(projectHtml);
 							}
 						}
 					});
