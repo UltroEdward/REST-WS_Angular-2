@@ -7,7 +7,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class HibernateUtil {
 
 	private static Logger LOG = LoggerFactory.getLogger(HibernateUtil.class);
@@ -33,6 +32,17 @@ public class HibernateUtil {
 	public static void shutdown() {
 		LOG.warn("Destroying session factory");
 		getSessionFactory().close();
+	}
+
+	public static String cleanString(String dirty, String unwantedChars) {
+		if (dirty.contains(unwantedChars)) {
+			return dirty.replace(unwantedChars, "");
+		}
+		return dirty;
+	}
+	
+	public static void main(String [] args){
+		System.out.println(cleanString("asdsaasd", "a"));
 	}
 
 }

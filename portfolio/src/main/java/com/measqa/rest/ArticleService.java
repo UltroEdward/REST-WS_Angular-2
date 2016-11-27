@@ -16,6 +16,5 @@ public class ArticleService extends BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Article getArticle(@PathParam("id") int id) {
 		return factory.getArticleDao().getArticle(id);
-
 	}
 }

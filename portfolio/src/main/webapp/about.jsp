@@ -3,6 +3,7 @@
 <html>
 
 <head>
+<base href="/">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +17,26 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+<!--  Angular features -->
+
+	<script>document.write('<base href="' + document.location + '" />');</script>
+    <!-- Polyfill(s) for older browsers -->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+
 </head>
+
+
 
 <body>
 
@@ -164,6 +184,10 @@
 
 				<!-- Experience items will be added here -->
 				<div class="job-container"></div>
+				<my-app>Loading...</my-app>
+				
+				
+				
 			</div>
 		</div>
 	</div>
@@ -171,6 +195,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
-	<script src="js/companies.js"></script>
+	<!--<script src="js/companies.js"></script> -->
 </body>
 </html>

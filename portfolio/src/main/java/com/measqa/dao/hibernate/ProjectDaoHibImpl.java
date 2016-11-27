@@ -20,18 +20,14 @@ public class ProjectDaoHibImpl implements ProjectDao {
 		return projects;
 	}
 
-	
 	public Project getProject(int id) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
 		Project project = new Project();
 		project = (Project) session.load(Project.class, id);
 		Hibernate.initialize(project);
-		//Hibernate.initialize(project.getCompany());
 		session.getTransaction().commit();
 		return project;
 	}
-	
-
 	
 }

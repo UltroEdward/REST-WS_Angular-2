@@ -22,6 +22,7 @@
 	<!--Here will be inserted header with nav bar  -->
 	<%@ include file="template/header.html"%>
 
+
 	<div class="container">
 		<div class="row">
 			<div class="box">
@@ -32,6 +33,8 @@
 					</h2>
 					<hr>
 				</div>
+				<div class="topic-container"> 
+				
 				<div class="col-lg-12 text-center">
 					<img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt="">
 					<h2>
@@ -47,6 +50,8 @@
 						architecto beatae vitae dicta sunt explicabo.</p>
 					<hr>
 				</div>
+				</div>
+				
 				<div class="col-lg-12 text-center">
 					<ul class="pager">
 						<li class="previous"><a href="#">&larr; Older</a></li>

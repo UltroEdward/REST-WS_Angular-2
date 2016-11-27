@@ -23,6 +23,7 @@
 	<%@ include file="template/header.html"%>
 
 	<div class="main-container"></div>
+	    <my-app>Loading...</my-app>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>

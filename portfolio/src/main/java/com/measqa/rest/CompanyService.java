@@ -18,7 +18,6 @@ public class CompanyService extends BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Company getCompany(@PathParam("id") int id) {
 		return factory.getCompanyDao().getCompany(id);
-
 	}
 	
 	@GET
