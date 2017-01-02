@@ -1,0 +1,60 @@
+.socials img:hover {
+	background-color: #3a87ad;
+	border-radius: 35px;
+}
+
+body {
+	background-image: none;
+	background-color: #d3d8de;
+}
+
+#header-top {
+	background-color: #4e5d6c;
+}
+
+#header-top a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+#header-top a:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar {
+	background-color: #ffec80;
+}
+
+.social a {
+	text-align: center;
+	font-size: 45px;
+	text-align: center;
+	text-decoration: none;
+	
+	margin: 10px;
+	width: 62px;
+    height: 62px;
+}
+
+.social a:hover {
+color:#ffec80
+}
+
+.header-experience {
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom:20px;
+}
+
+
+#header-top a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.project-container ul{
+	padding-left : 0px;
+}
