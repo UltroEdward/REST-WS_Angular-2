@@ -3,8 +3,8 @@
 
 #Angular2
 node_modules/
-app/*.js
-app/*.js.map
+/FrontEnd/**/*.js
+/FrontEnd/**/*.js.map
 
 ###project###
 .metadata/
