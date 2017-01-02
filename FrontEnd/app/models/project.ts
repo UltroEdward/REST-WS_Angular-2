@@ -1,7 +1,7 @@
 export class Project {
   id: number;
   about: string;
-  projectName: string;
-  projectWeb: string;
-  work: string;
+  name: string;
+  url: string;
+  description: string;
 }

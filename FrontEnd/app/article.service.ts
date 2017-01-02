@@ -9,7 +9,7 @@ import { Article } from './models/article';
 export class ArticleService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private articleUrl = 'http://localhost:8080/rest/articles'; 
+  private articleUrl = 'http://measqa.com:8081/rest/articles'; 
 
   constructor(private http: Http) { 
     this.http=http

@@ -17,8 +17,8 @@ private companyUrl = 'http://localhost:8080/rest/companies';
   }
 
   getCompanies(): Promise<Company[]> {
-	console.log(this.http.get(this.companyUrl));
-  console.log(this.http.get(this.companyUrl).toPromise().then(response => response.json() as Company[]));
+//console.log(this.http.get(this.companyUrl));
+ // console.log(this.http.get(this.companyUrl).toPromise().then(response => response.json() as Company[]));
 	
     return this.http.get(this.companyUrl).toPromise().then(response => response.json() as Company[]);
   }

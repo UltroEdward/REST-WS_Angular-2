@@ -2,11 +2,11 @@ import { Project } from './project';
 
 export class Company {
   id: number;
-  companyImg: string;
-  companyUrl: string;
-  companyName: string;
+  logo: string;
+  web: string;
+  name: string;
   title: string;
-  startDate: string;
-  endDate: string;
+  start: string;
+  end: string;
   projects: Project [];
 }
