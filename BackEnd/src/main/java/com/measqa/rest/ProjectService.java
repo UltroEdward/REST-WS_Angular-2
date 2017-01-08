@@ -14,7 +14,6 @@ import com.measqa.entity.portfolio.Project;
 public class ProjectService extends BaseService {
 
 	@GET
-	@Path("")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Project> getAllProjects() {
 		return factory.getProjectDao().getAllProjects();

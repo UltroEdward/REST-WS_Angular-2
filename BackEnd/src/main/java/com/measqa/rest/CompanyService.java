@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.measqa.entity.portfolio.Company;
+import com.measqa.utils.Constants;
 
 @Path("/companies")
 public class CompanyService extends BaseService {
@@ -18,14 +19,12 @@ public class CompanyService extends BaseService {
 	public Company getCompany(@PathParam("id") int id) {
 		return factory.getCompanyDao().getCompany(id);
 	}
-	
+
 	@GET
-	@Path("")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllCompanies() {
-		 Response response = Response.status(200).entity(factory.getCompanyDao().getAllCompamies()).header("Access-Control-Allow-Origin", "*").build();
-		 return response;
-		
+		Response response = Response.status(200).entity(factory.getCompanyDao().getAllCompamies())
+				.header("Access-Control-Allow-Origin", Constants.ALLOWED_DOMAIN).build();
+		return response;
 	}
-	//Access-Control-Allow-Origin: http://localhost:3000
 }
