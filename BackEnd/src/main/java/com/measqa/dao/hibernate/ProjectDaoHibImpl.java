@@ -7,18 +7,10 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
 import com.measqa.dao.interfaces.ProjectDao;
-import com.measqa.entity.portfolio.Project;
+import com.measqa.entity.Project;
 import com.measqa.utils.HibernateUtil;
 
 public class ProjectDaoHibImpl implements ProjectDao {
-
-	public List<Project> getAllProjects() {
-		List<Project> projects = new ArrayList<Project>();
-		Project project = new Project();
-		project.setProjectName("FICO");
-		projects.add(project);
-		return projects;
-	}
 
 	public Project getProject(int id) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -29,5 +21,17 @@ public class ProjectDaoHibImpl implements ProjectDao {
 		session.getTransaction().commit();
 		return project;
 	}
-	
+
+	@SuppressWarnings("deprecation")
+	@Override
+	public List<Project> getAllProjects() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		List<Project> projects = new ArrayList<Project>();
+		projects = session.createCriteria(Project.class).list();
+		Hibernate.initialize(projects);
+		session.getTransaction().commit();
+		return projects;
+	}
+
 }

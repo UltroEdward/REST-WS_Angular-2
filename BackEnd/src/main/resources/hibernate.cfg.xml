@@ -5,9 +5,6 @@
 <hibernate-configuration>
 	<session-factory>
 	
-
-    	
-      
 		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.connection.password">Imp0ss1bl</property>
@@ -23,11 +20,10 @@
  		<property name="hibernate.c3p0.max_statements">100</property>
  		<property name="hibernate.c3p0.idle_test_period">3000</property>
   
-	    <mapping class="com.measqa.entity.portfolio.Project" />
-		<mapping class="com.measqa.entity.portfolio.Company" />
+	    <mapping class="com.measqa.entity.Project" />
+		<mapping class="com.measqa.entity.Company" />
         <mapping class="com.measqa.entity.Article" />
 
-	
 	</session-factory>
 </hibernate-configuration>
 

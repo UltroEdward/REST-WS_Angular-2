@@ -13,7 +13,7 @@ public abstract class DaoFactory {
 	public abstract ArticleDao getArticleDao();
 
 	public abstract ProjectDao getProjectDao();
-	
+
 	public abstract CompanyDao getCompanyDao();
 
 }

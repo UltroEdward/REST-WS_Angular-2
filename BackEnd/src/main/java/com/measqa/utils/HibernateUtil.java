@@ -34,15 +34,4 @@ public class HibernateUtil {
 		getSessionFactory().close();
 	}
 
-	public static String cleanString(String dirty, String unwantedChars) {
-		if (dirty.contains(unwantedChars)) {
-			return dirty.replace(unwantedChars, "");
-		}
-		return dirty;
-	}
-	
-	public static void main(String [] args){
-		System.out.println(cleanString("asdsaasd", "a"));
-	}
-
 }

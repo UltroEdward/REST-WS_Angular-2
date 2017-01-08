@@ -1,14 +1,15 @@
-package com.measqa.rest;
+package com.measqa.rest.application;
+
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
-import com.measqa.entity.portfolio.Company;
-import com.measqa.utils.Constants;
+import com.measqa.entity.Company;
+import com.measqa.rest.BaseService;
 
 @Path("/companies")
 public class CompanyService extends BaseService {
@@ -22,9 +23,7 @@ public class CompanyService extends BaseService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getAllCompanies() {
-		Response response = Response.status(200).entity(factory.getCompanyDao().getAllCompamies())
-				.header("Access-Control-Allow-Origin", Constants.ALLOWED_DOMAIN).build();
-		return response;
+	public List<Company> getAllCompanies() {
+		return factory.getCompanyDao().getAllCompamies();
 	}
 }

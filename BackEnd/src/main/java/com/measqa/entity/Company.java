@@ -1,4 +1,4 @@
-package com.measqa.entity.portfolio;
+package com.measqa.entity;
 
 import java.util.Set;
 
@@ -11,12 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-
 
 @Entity
 @Table(name = "COMPANIES")

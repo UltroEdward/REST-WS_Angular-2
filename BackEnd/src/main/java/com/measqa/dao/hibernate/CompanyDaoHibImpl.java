@@ -7,7 +7,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
 import com.measqa.dao.interfaces.CompanyDao;
-import com.measqa.entity.portfolio.Company;
+import com.measqa.entity.Company;
 import com.measqa.utils.HibernateUtil;
 
 public class CompanyDaoHibImpl implements CompanyDao {
@@ -28,14 +28,12 @@ public class CompanyDaoHibImpl implements CompanyDao {
 	public List<Company> getAllCompamies() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		List<Company> companyies = new ArrayList<Company>();
+		List<Company> companies = new ArrayList<Company>();
 
-		companyies = session.createCriteria(Company.class).list();
-		Hibernate.initialize(companyies);
-		for(Company company: companyies){
-			Hibernate.initialize(company.getProjects());
-		}	
+		companies = session.createCriteria(Company.class).list();
+		Hibernate.initialize(companies);
+		companies.stream().forEach(comp -> Hibernate.initialize(comp.getProjects()));
 		session.getTransaction().commit();
-		return companyies;
+		return companies;
 	}
 }

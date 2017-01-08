@@ -9,8 +9,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
-
 @Entity
 @Table(name = "ARTICLES")
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })

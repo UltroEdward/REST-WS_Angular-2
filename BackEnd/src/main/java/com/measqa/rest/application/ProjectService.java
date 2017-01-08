@@ -1,4 +1,4 @@
-package com.measqa.rest;
+package com.measqa.rest.application;
 
 import java.util.List;
 
@@ -8,7 +8,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.measqa.entity.portfolio.Project;
+import com.measqa.entity.Project;
+import com.measqa.rest.BaseService;
 
 @Path("/projects")
 public class ProjectService extends BaseService {
@@ -24,7 +25,6 @@ public class ProjectService extends BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Project getProject(@PathParam("id") int id) {
 		return factory.getProjectDao().getProject(id);
-
 	}
-	
+
 }
