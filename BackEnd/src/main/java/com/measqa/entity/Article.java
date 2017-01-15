@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "ARTICLES")
@@ -23,6 +24,7 @@ public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ARTICLE_ID", unique = true, nullable = false)
+	@JsonProperty("id")
 	public int getId() {
 		return id;
 	}
@@ -32,6 +34,7 @@ public class Article {
 	}
 
 	@Column(name = "NAME", unique = true, nullable = false, length = 10)
+	@JsonProperty("name")
 	public String getName() {
 		return name;
 	}
@@ -41,6 +44,7 @@ public class Article {
 	}
 
 	@Column(name = "PATH_TO_PIC", unique = true, nullable = false, length = 10)
+	@JsonProperty("picture-path")
 	public String getPathToMainPic() {
 		return pathToMainPic;
 	}
@@ -50,6 +54,7 @@ public class Article {
 	}
 
 	@Column(name = "DESCRIPTION_SHORT", unique = true, nullable = false, length = 10)
+	@JsonProperty("description-short")
 	public String getShortDescription() {
 		return shortDescription;
 	}
@@ -59,6 +64,7 @@ public class Article {
 	}
 
 	@Column(name = "DESCRIPTION_FULL", unique = true, nullable = false, length = 10)
+	@JsonProperty("description-full")
 	public String getFullDescription() {
 		return fullDescription;
 	}

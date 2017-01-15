@@ -7,5 +7,5 @@ import com.measqa.entity.Company;
 public interface CompanyDao {
 
 	Company getCompany(int id);
-	List<Company> getAllCompamies();
+	List<Company> getAllCompamies(int size, int pageNumber);
 }

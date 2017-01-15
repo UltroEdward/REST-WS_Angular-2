@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "PROJECTS")
@@ -24,6 +25,7 @@ public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "PROJECT_ID", unique = true, nullable = false)
+	@JsonProperty("id")
 	public int getId() {
 		return id;
 	}
@@ -33,6 +35,7 @@ public class Project {
 	}
 
 	@Column(name = "NAME", unique = true, nullable = false, length = 10)
+	@JsonProperty("name")
 	public String getProjectName() {
 		return projectName;
 	}
@@ -42,6 +45,7 @@ public class Project {
 	}
 
 	@Column(name = "URL", unique = true, nullable = false, length = 10)
+	@JsonProperty("url")
 	public String getProjectWeb() {
 		return projectWeb;
 	}
@@ -51,6 +55,7 @@ public class Project {
 	}
 
 	@Column(name = "PROJECT_ABOUT", unique = true, nullable = false, length = 10)
+	@JsonProperty("about")
 	public String getAbout() {
 		return about;
 	}
@@ -60,6 +65,7 @@ public class Project {
 	}
 
 	@Column(name = "PROJECT_WORK", unique = true, nullable = false, length = 10)
+	@JsonProperty("work")
 	public String getWork() {
 		return work;
 	}

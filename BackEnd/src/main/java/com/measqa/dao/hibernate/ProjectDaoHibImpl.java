@@ -29,9 +29,11 @@ public class ProjectDaoHibImpl implements ProjectDao {
 		session.beginTransaction();
 		List<Project> projects = new ArrayList<Project>();
 		projects = session.createCriteria(Project.class).list();
+		//projects = session.createCriteria(Project.class).list();
+		//Hibernate.initialize(projects);
 		Hibernate.initialize(projects);
 		session.getTransaction().commit();
 		return projects;
 	}
-
+	
 }
