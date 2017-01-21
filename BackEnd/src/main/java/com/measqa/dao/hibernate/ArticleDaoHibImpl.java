@@ -14,8 +14,15 @@ public class ArticleDaoHibImpl implements ArticleDao {
 		session.beginTransaction();
 		Article article = new Article();
 		article = (Article) session.load(Article.class, id);
-		Hibernate.initialize(article);
-		session.getTransaction().commit();
+		
+		try {
+			Hibernate.initialize(article);
+			session.getTransaction().commit();
+		} catch (Exception ex) {
+			session.getTransaction().commit();
+			return new Article();	
+		}
+
 		return article;
 	}
 
